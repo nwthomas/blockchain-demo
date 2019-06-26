@@ -1,2 +1,3 @@
-# blockchain-dapp
-An example blockchain application using Solidity on the Ethereum blockchain
+# BLOCKCHAIN DECENTRALIZED APPLICATION
+
+An example blockchain decentralized application using Solidity on the Ethereum blockchain
