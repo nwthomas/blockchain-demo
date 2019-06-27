@@ -30,4 +30,27 @@ UTC--2019-06-26T04-08-09.845262000Z--e1d9a0e3f041ffdeed61508e3832a4d4add8eef5
 
 You can also use geth --datadir . account list to list the accounts and where the keystores are stored.
 
-##
+## APPLYING STARTNODE.SH SCRIPT
+
+Run the command `chmod +x startnode.sh` in the private directory in order to give permission to your script
+
+Now we can start our private node.
+
+## STARTING THE PRIVATE NODE
+
+Make sure that your file pathways are correct from your desktop, and then run the command `./startnode.sh` inside the `/private` directory in order to run your shell script and turn on your node.
+
+## CONNECTING TO THE RUNNING PRIVATE NODE
+
+Use the command `geth attach` in the `/private` directory
+
+Some commands you can use are:
+
+- `eth.accounts` (gives us all accounts created and registered on this node)
+- `eth.coinbase` (gives us the main address that we use for mining nodes)
+- `eth.getBalance(eth.accounts[1])` checking amount of wei per account
+- `web3.fromWei(eth.getBalance(eth.coinbase), "ether")` gets us the amount of ether converted from wei in a wallet
+- `miner.start()` starts mining (you can also input number argument to tell it how many threads you want to use to mine)
+- `miner.stop()` stops mining
+- `net.version` gives the network identifier
+- `personal.unlockAccount(eth.accounts[1], "password", 300)` can unlock the account
