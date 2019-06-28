@@ -30,6 +30,20 @@ UTC--2019-06-26T04-08-09.845262000Z--e1d9a0e3f041ffdeed61508e3832a4d4add8eef5
 
 You can also use geth --datadir . account list to list the accounts and where the keystores are stored.
 
+## CREATING A NEW GENESIS NODE
+
+First, run the command `puppeth` and follow the steps.
+
+Second, use the command `geth --data-dir ~/<path to your project>/ChainSkills/private init chainskills.json` using the `chainskills.json` file that you created in the step above.
+
+## CREATING NEW ACCOUNTS
+
+In the private directory, run the command `geth --datadir . account new` and enter a new password twice when prompted.
+
+## LISTING ALL ACCOUNTS
+
+Type `geth --datadir . account list` in the terminal inside the private directory.
+
 ## APPLYING STARTNODE.SH SCRIPT
 
 Run the command `chmod +x startnode.sh` in the private directory in order to give permission to your script
@@ -53,4 +67,8 @@ Some commands you can use are:
 - `miner.start()` starts mining (you can also input number argument to tell it how many threads you want to use to mine)
 - `miner.stop()` stops mining
 - `net.version` gives the network identifier
-- `personal.unlockAccount(eth.accounts[1], "password", 300)` can unlock the account
+- `personal.unlockAccount(eth.accounts[1], "password", 300)` can unlock the account in question
+
+## SENDING ETHER BETWEEN ACCOUNTS
+
+We use the `eth.sendTransation({from: eth.accounts[0], to: eth.accounts[1], value: web3.toWei(10, "ether)})` to transfer wei between accounts
