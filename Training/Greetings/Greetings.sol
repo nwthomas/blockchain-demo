@@ -1,17 +1,17 @@
-pragma solidity >=0.4.18;
+pragma solidity ^0.4.26;
 
 contract Greetings {
   string message;
 
   constructor() public {
-    message = "I'm ready!";
+    message = "Ready!";
   }
 
-  function setGreetings(string _message) public {
+  function setGreetings(string memory _message) public {
     message = _message;
   }
 
-  function getGreetings() public view (string) {
+  function getGreetings() public view returns (string memory) {
     return message;
   }
 }

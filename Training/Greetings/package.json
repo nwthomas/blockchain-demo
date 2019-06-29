@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "solc": "0.4.18",
+    "solc": "0.4.26",
     "web3": "0.20.0"
   }
 }
